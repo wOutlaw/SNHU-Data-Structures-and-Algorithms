@@ -1,3 +1,5 @@
+Linked List implementation
+
 Task 1: Internal structure for list entries, housekeeping variables.
 Create the structure, internal to the class, that will hold the bid entries. Consider what other variables are needed to help manage the list.
 
