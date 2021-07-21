@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : BinarySearchTree.cpp
 // Author      : Warren Outlaw
-// Date		   : 6-17-18
+// Date	       : 6-17-18
 // Course      : CS-260 R5784
 // Version     : 1.0
 // Copyright   : Copyright © 2017 SNHU COCE
@@ -37,7 +37,7 @@ struct Bid {
 // forward declaration
 void displayBid(Bid bid);
 
-// FIXME (1): Internal structure for tree node
+// Internal structure for tree node
 struct Node {
 	Bid bid;
 	Node* left;
@@ -106,7 +106,7 @@ void BinarySearchTree::InOrder() {
  * Insert a bid
  */
 void BinarySearchTree::Insert(Bid bid) {
-    // FIXME (2a) Implement inserting a bid into the tree
+    // Implement inserting a bid into the tree
 
 	// check if root is empty
 	if (root == nullptr) {
@@ -123,7 +123,7 @@ void BinarySearchTree::Insert(Bid bid) {
  * Remove a bid
  */
 void BinarySearchTree::Remove(string bidId) {
-    // FIXME (4a) Implement removing a bid from the tree
+    // Implement removing a bid from the tree
 
 	// start at the root
 	this->removeNode(root, bidId);
@@ -133,7 +133,7 @@ void BinarySearchTree::Remove(string bidId) {
  * Search for a bid
  */
 Bid BinarySearchTree::Search(string bidId) {
-    // FIXME (3) Implement searching the tree for a bid
+    // Implement searching the tree for a bid
 	Bid bid;
 
 	Node* current = root;
@@ -166,7 +166,7 @@ Bid BinarySearchTree::Search(string bidId) {
  * @param bid Bid to be added
  */
 void BinarySearchTree::addNode(Node* node, Bid bid) {
-    // FIXME (2b) Implement inserting a bid into the tree
+    // Implement inserting a bid into the tree
 
 	// if current bidId is larger, add new bidId to left
 	if (node->bid.bidId.compare(bid.bidId) > 0) {
