@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : VectorSorting.cpp
 // Author      : Warren Outlaw
-// Date		   : 6-3-18
+// Date	       : 6-3-18
 // Course      : CS-260 R5784
 // Version     : 1.0
 // Copyright   : Copyright © 2017 SNHU COCE
@@ -113,7 +113,7 @@ vector<Bid> loadBids(string csvPath) {
     return bids;
 }
 
-// FIXME (2a): Implement the quick sort logic over bid.title
+// Implement the quick sort logic over bid.title
 
 /**
  * Partition the vector of bids into two parts, low and high
@@ -182,7 +182,7 @@ void quickSort(vector<Bid>& bids, int begin, int end) {
 	quickSort(bids, mid + 1, end);
 }
 
-// FIXME (1a): Implement the selection sort logic over bid.title
+// Implement the selection sort logic over bid.title
 
 /**
  * Perform a selection sort on bid title
@@ -286,7 +286,7 @@ int main(int argc, char* argv[]) {
 
             break;
 
-        // FIXME (1b): Invoke the selection sort and report timing results
+        // Invoke the selection sort and report timing results
         case 3:
         	// Initialize a timer variable before loading bids
         	ticks = clock();
@@ -304,7 +304,7 @@ int main(int argc, char* argv[]) {
         	break;
 
 
-        // FIXME (2b): Invoke the quick sort and report timing results
+        // Invoke the quick sort and report timing results
         case 4:
         	// Initialize a timer variable before loading bids
             ticks = clock();
