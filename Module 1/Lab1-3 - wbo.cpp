@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : Lab1-3.cpp
 // Author      : Warren Outlaw
-// Date		   : 5-6-18
+// Date	       : 5-6-18
 // Course      : CS-260 R5784
 // Version     : 1.0
 // Copyright   : Copyright © 2017 SNHU COCE
