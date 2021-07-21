@@ -43,7 +43,7 @@ struct Bid {
 class LinkedList {
 
 private:
-    // FIXME (1): Internal structure for list entries, housekeeping variables
+    // Internal structure for list entries, housekeeping variables
 	struct Node {
 		Bid bid;
 		Node* next;
@@ -77,7 +77,7 @@ public:
  * Default constructor
  */
 LinkedList::LinkedList() {
-    // FIXME (2): Initialize housekeeping variables
+    // Initialize housekeeping variables
 	head = nullptr;
 	tail = nullptr;
 }
@@ -92,7 +92,7 @@ LinkedList::~LinkedList() {
  * Append a new bid to the end of the list
  */
 void LinkedList::Append(Bid bid) {
-    // FIXME (3): Implement append logic
+    // Implement append logic
 	Node* node = new Node(bid);
 
 	// if the list is empty new node becomes the head
@@ -116,7 +116,7 @@ void LinkedList::Append(Bid bid) {
  * Prepend a new bid to the start of the list
  */
 void LinkedList::Prepend(Bid bid) {
-    // FIXME (4): Implement prepend logic
+    // Implement prepend logic
 	Node* node = new Node(bid);
 
 	if (head != nullptr) {
@@ -132,7 +132,7 @@ void LinkedList::Prepend(Bid bid) {
  * Simple output of all bids in the list
  */
 void LinkedList::PrintList() {
-    // FIXME (5): Implement print logic
+    // Implement print logic
 	// start at the  beginning
 	Node* current = head;
 
@@ -149,7 +149,7 @@ void LinkedList::PrintList() {
  * @param bidId The bid id to remove from the list
  */
 void LinkedList::Remove(string bidId) {
-    // FIXME (6): Implement remove logic
+    // Implement remove logic
 	// compare the bidId to the first item
 	if (head != nullptr) {
 		if (!head->bid.bidId.compare(bidId)) {
@@ -181,7 +181,7 @@ void LinkedList::Remove(string bidId) {
  * @param bidId The bid id to search for
  */
 Bid LinkedList::Search(string bidId) {
-    // FIXME (7): Implement search logic
+    // Implement search logic
 	Node* current = head;
 
 	// loop to compare our bidId to each bidId in the list until found
