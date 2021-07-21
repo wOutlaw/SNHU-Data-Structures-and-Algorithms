@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : HashTable.cpp
 // Author      : Warren Outlaw
-// Date		   : 6-10-18
+// Date	       : 6-10-18
 // Course      : CS-260 R5784
 // Version     : 1.0
 // Copyright   : Copyright © 2017 SNHU COCE
@@ -51,7 +51,7 @@ void displayBid(Bid bid);
 class HashTable {
 
 private:
-    // FIXME (1): Define structures to hold bids
+    // Define structures to hold bids
 	struct Node {
 		Bid bid;
 		unsigned key;
@@ -92,7 +92,7 @@ public:
  * Default constructor
  */
 HashTable::HashTable() {
-    // FIXME (2): Initialize the structures used to hold bids
+    // Initialize the structures used to hold bids
 	nodes.resize(tableSize);
 }
 
@@ -100,7 +100,7 @@ HashTable::HashTable() {
  * Destructor
  */
 HashTable::~HashTable() {
-    // FIXME (3): Implement logic to free storage when class is destroyed
+    // Implement logic to free storage when class is destroyed
 	nodes.erase(nodes.begin());
 }
 
@@ -114,7 +114,7 @@ HashTable::~HashTable() {
  * @return The calculated hash
  */
 unsigned int HashTable::hash(int key) {
-    // FIXME (4): Implement logic to calculate a hash value
+    // Implement logic to calculate a hash value
 	// modulo hash function based on tableSize
 	return key % tableSize;
 }
@@ -125,7 +125,7 @@ unsigned int HashTable::hash(int key) {
  * @param bid The bid to insert
  */
 void HashTable::Insert(Bid bid) {
-    // FIXME (5): Implement logic to insert a bid
+    // Implement logic to insert a bid
 	// turn the hash string into an integer
 	unsigned key = hash(atoi(bid.bidId.c_str()));
 	
@@ -159,7 +159,7 @@ void HashTable::Insert(Bid bid) {
  * Print all bids
  */
 void HashTable::PrintAll() {
-    // FIXME (6): Implement logic to print all bids
+    // Implement logic to print all bids
 
 	// loop through to display the bids, skip empty spots
 	for (unsigned int i = 0; i < nodes.size(); i++) {
@@ -180,7 +180,7 @@ void HashTable::PrintAll() {
  * @param bidId The bid id to search for
  */
 void HashTable::Remove(string bidId) {
-    // FIXME (7): Implement logic to remove a bid
+    // Implement logic to remove a bid
 	unsigned key = hash(atoi(bidId.c_str()));
 	
 	nodes.erase(nodes.begin() + key);
@@ -194,7 +194,7 @@ void HashTable::Remove(string bidId) {
 Bid HashTable::Search(string bidId) {
     Bid bid;
 
-    // FIXME (8): Implement logic to search for and return a bid
+    // Implement logic to search for and return a bid
 	unsigned key = hash(atoi(bidId.c_str()));
 	
 	// try to retrieve node
