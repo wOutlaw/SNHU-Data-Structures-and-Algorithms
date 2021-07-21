@@ -1,2 +1,3 @@
 # Data-Structures-and-Algorithms
-CS-260
+
+Repo showcasing my work for CS-260 Data Structures and Algorithms
