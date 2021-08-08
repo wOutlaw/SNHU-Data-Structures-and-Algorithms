@@ -100,7 +100,7 @@ HashTable::HashTable() {
  * Destructor
  */
 HashTable::~HashTable() {
-    // FIXME (3): Implement logic to free storage when class is destroyed
+    // Implement logic to free storage when class is destroyed
 	nodes.erase(nodes.begin());
 }
 
