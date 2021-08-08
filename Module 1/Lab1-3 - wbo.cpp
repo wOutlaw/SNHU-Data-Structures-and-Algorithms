@@ -48,7 +48,6 @@ void displayBid(bidInfo bid) {
  * @param ch The character to strip out
  */
 
-// I moved this function up to avoid errors in getBid()
 double strToDouble(string str, char ch) {
     str.erase(remove(str.begin(), str.end(), ch), str.end());
     return atof(str.c_str());
