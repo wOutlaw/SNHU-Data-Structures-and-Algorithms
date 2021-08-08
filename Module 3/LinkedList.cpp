@@ -153,9 +153,12 @@ void LinkedList::Remove(string bidId) {
 	// compare the bidId to the first item
 	if (head != nullptr) {
 		if (head->bid.bidId.compare(bidId) == 0) {
-			Node* nextNode = head->next;
+			// if head node matches, creat temp node pointing to next node
+			Node* tempNode = head->next;
+			
+			// replace current head node with the next node 
 			delete head;
-			head = nextNode;
+			head = tempNode;
 		}
 	}
 
@@ -165,9 +168,15 @@ void LinkedList::Remove(string bidId) {
 	// we are looking for.  update pointers and list size as necessary.
 	while (current->next != nullptr) {
 		if (current->next->bid.bidId.compare(bidId) == 0) {
-			Node* nextNode = current->next;
-			current->next = nextNode->next;
-			delete nextNode;
+			// save the next node (one to be removed)
+			Node* tempNode = current->next;
+			
+			// make current node point beyond the next one (to be removed)
+			current->next = tempNode->next;
+			
+			// delete the tempNode
+			delete tempNode;
+			
 			size--;
 			return;
 		}
