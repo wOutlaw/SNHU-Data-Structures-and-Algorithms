@@ -152,7 +152,7 @@ void LinkedList::Remove(string bidId) {
     // Implement remove logic
 	// compare the bidId to the first item
 	if (head != nullptr) {
-		if (!head->bid.bidId.compare(bidId)) {
+		if (head->bid.bidId.compare(bidId) == 0) {
 			Node* nextNode = head->next;
 			delete head;
 			head = nextNode;
@@ -164,7 +164,7 @@ void LinkedList::Remove(string bidId) {
 	// loop through each list item after the first and delete the bidId that matches the one
 	// we are looking for.  update pointers and list size as necessary.
 	while (current->next != nullptr) {
-		if (!current->next->bid.bidId.compare(bidId)) {
+		if (current->next->bid.bidId.compare(bidId) == 0) {
 			Node* nextNode = current->next;
 			current->next = nextNode->next;
 			delete nextNode;
@@ -186,7 +186,7 @@ Bid LinkedList::Search(string bidId) {
 
 	// loop to compare our bidId to each bidId in the list until found
 	while (current != nullptr) {
-		if (!current->bid.bidId.compare(bidId)) {
+		if (current->bid.bidId.compare(bidId) == 0) {
 			return current->bid;
 		}
 		current = current->next;
@@ -325,6 +325,7 @@ int main(int argc, char* argv[]) {
         cout << "  3. Display All Bids" << endl;
         cout << "  4. Find Bid" << endl;
         cout << "  5. Remove Bid" << endl;
+	cout << "  6. Prepend Bid" << endl;
         cout << "  9. Exit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
@@ -375,6 +376,13 @@ int main(int argc, char* argv[]) {
 
         case 5:
             bidList.Remove(bidKey);
+
+            break;
+			
+	case 6:
+	    bid = getBid();
+            bidList.Prepend(bid);
+            displayBid(bid);
 
             break;
         }
