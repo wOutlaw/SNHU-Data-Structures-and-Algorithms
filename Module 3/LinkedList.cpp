@@ -237,6 +237,7 @@ Bid getBid() {
     getline(cin, bid.bidId);
 
     cout << "Enter title: ";
+    cin.ignore();
     getline(cin, bid.title);
 
     cout << "Enter fund: ";
